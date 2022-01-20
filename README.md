@@ -7,8 +7,7 @@
 ➤ ENTASRV (Server, you can choose any name) (NFS Setup)
 
     ● nano /etc/hosts
-    ● Add this line: (PRIVATE SERVER IP) entasrv.enta.pt entasrv enta.pt
-    ● Leave /etc/hosts
+    ● Add this line: 172.31.20.30 entasrv.enta.pt entasrv enta.pt (Change the IP)
     ● apt update && apt -y upgrade && apt install nfs-kernel-server
     ● nano /etc/exports
     ● Add: /var/homes *(rw,sync,no_subtree_check,no_root_squash)
@@ -21,14 +20,15 @@
 
 ➤ ENTACLIENT (Client) (NFS Setup)
 
-    ● apt update && apt upgrade -y
+    ● apt update && apt -y upgrade && apt install nfs-common
     ● nano /etc/hosts
-    ● Add this line: (PRIVATE SERVER IP) entasrv.enta.pt entasrv enta.pt
+    ● Add this line: 172.31.20.30 entasrv.enta.pt entasrv enta.pt (Change IP)
     ● mkdir /var/homes
-    ● mount -t nfs (PRIVATE SERVER IP):/var/homes /var/homes/
+    ● mount -t nfs 172.31.20.30:/var/homes /var/homes/  (Change IP)
     ● cat /etc/mtab
-    ● Copy the line with the Private IP and paste here ( /etc/fstab ) and add ,nofail
+    ● Copy the line above paste here ( /etc/fstab ) and add ,nofail
     
+  ![Screenshot_2](https://user-images.githubusercontent.com/85712710/150430559-4d44d7bf-9a3b-4ff6-833a-a2d97517fa13.png)
  
 ➤ ENTASRV (NIS Setup)
 
