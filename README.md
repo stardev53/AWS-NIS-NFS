@@ -40,7 +40,7 @@
       # This line gives access to everybody. PLEASE ADJUST! (change 0.0.0.0 / 0.0.0.0 to mask and private network)
       255.255.255.0         172.31.0.0
       # add to the end: IP range you allow to access
-      255.255.255.0         172.31.0.0
+      255.255.255.0         172.31.3.0
     ● nano /var/yp/Makefile
       - MERGE_PASSWD=true
       - MERGE_GROUP=true
