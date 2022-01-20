@@ -1,7 +1,8 @@
 ● NIS | NFS Server with Client ●
 
 ➤ AWS: Create 3 Virtual Machines in the same VPC , 1 Server and 2 Clients 
-The goal is to store all of a user's data on the server in case of a computer swap, continues to have access to your account with the same data.
+
+➤ The goal is to store all of a user's data on the server in case of a computer swap continues to have access to your account in another computer with the same data.
 
 ➤ ENTASRV (Server, you can choose any name) (NFS Setup)
 
@@ -14,9 +15,9 @@ The goal is to store all of a user's data on the server in case of a computer sw
     ● mkdir /var/homes
     ● exportfs -a
     ● systemctl enable --now nfs-kernel-server
-    ● adduser flavio --home /var/homes/flavio
-    ● echo xfce4-session > /var/homes/flavio/.xsession
-    ● chown flavio:flavio /var/homes/flavio/.xsession
+    ● adduser maria --home /var/homes/maria
+    ● echo xfce4-session > /var/homes/maria/.xsession
+    ● chown maria:maria /var/homes/maria/.xsession
 
 ➤ ENTACLIENT (Client) (NFS Setup)
 
