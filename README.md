@@ -2,8 +2,6 @@
 
 ➤ AWS: Create 3 Virtual Machines in the same VPC , 1 Server and 2 Clients 
 
-➤ The goal is to store all of a user's data on the server in case of a computer swap continues to have access to your account in another computer with the same data.
-
 ➤ ENTASRV (Server, you can choose any name) (NFS Setup)
 
     ● nano /etc/hosts
